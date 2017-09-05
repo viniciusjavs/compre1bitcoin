@@ -2,8 +2,7 @@ from time import time
 from requests import get
 from fractions import Fraction
 from decimal import Decimal
-import locale
-locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
+from babel import numbers
 
 def timestamp():
     '''
@@ -84,7 +83,7 @@ def buyFullBTC():
         for page in range(0,order_book_pages):
             order_book_selling = fetchOrderBookPage(meta, page)
             if sweepPage(order_book_selling, total):
-                return locale.currency(total['brl'], grouping=True)
+                return numbers.format_currency(float(total['brl']), 'BRL', locale='pt_BR')
         return 'Order currently unavailable'
     except Exception as e:
         return 'Error: ' + str(e)
