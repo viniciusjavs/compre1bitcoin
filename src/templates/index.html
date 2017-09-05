@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Mini-Project: Compre1Bitcoin">
+    <meta name="author" content="@vjavs" >
+    <link rel="icon" href="http://getbootstrap.com/docs/3.3/favicon.ico">
+
+    <title>Compre um Bitcoin!</title>
+
+    <link href='static/copyleft.css' rel="stylesheet"/>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/3.3/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+      </div>
+
+      <div class="jumbotron">
+        <h1>Compre um Bitcoin!</h1>
+        <p class="lead">Saiba quantos Reais (BRL) são necessários para comprar um Bitcoin hoje!</p>
+        <p class="text-center"><span class="label label-info">1 Bitcoin</span>=<span class="label label-info" id="btc">{{ btc }}</span></p>
+      </div>
+
+      <footer class="footer">
+        <p><span class="copyleft">&copy;</span> vjavs 2017</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type=text/javascript>$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};</script>
+    <script type="text/javascript" src='static/update.js'></script>
+    
+</body></html>

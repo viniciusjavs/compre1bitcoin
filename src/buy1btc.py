@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from time import time
 from requests import get
 from fractions import Fraction
